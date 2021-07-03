@@ -1,7 +1,7 @@
 # CC
 Something im working on for the minecraft mod
 
-### To DO
+### To Do
 
  - [ ] Make a farming system
  - [ ] Make a mining system
