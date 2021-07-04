@@ -25,3 +25,8 @@ turtle.transferTo(number slot [, number quantity])
 
 ## Super importaint stuff
 - [ ] Overly sexualize the bot
+
+
+### Credits:
+- Bobby2075
+- TobsiDev
