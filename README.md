@@ -9,7 +9,24 @@ Something im working on for the minecraft mod
 
 
  ### Farming system
-- [x] switch tool
-- [ ] refuel
+- [x] switch tool ✓
+- [x] dump goods in chest
+- [x] refuel
 - [ ] main loop 
-- [ ] dump goods in chest
+
+TODO:
+
+boolean success 	
+
+turtle.transferTo(number slot [, number quantity])
+
+ 	Transfers quantity items from the selected slot to slot. If quantity isn't specified, will attempt to transfer everything in the selected slot to slot. 
+
+cummies
+    
+    cum
+    in my
+    pants
+
+## Super importaint stuff
+- [ ] Overly sexualize the bot

@@ -3,5 +3,8 @@
         "turtle",
         "swapTool",
         "bootH"
+    ],
+    "Lua.diagnostics.disable": [
+        "lowercase-global"
     ]
 }
