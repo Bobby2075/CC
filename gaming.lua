@@ -6,6 +6,92 @@ os.setComputerLabel("PotatoCollector")
 local seed, potato, carrot, pickaxe = 1, 2, 3, 4;
 local drop = (x*2)+1
 
+local stackCounter = 1
+local potatoStackWSpace = 1
+
+-- Tobsi
+-- Stack the crops
+
+
+function canStack()
+    stackCounter = 1
+    local stopStackingC = true
+    while stopStackingC do
+        if stackCounter > 16 then
+            stopStackingC = false
+        else
+
+            local curItem = turtle.getItemDetail(stackCounter)
+            if curItem ~= nil then
+                if curItem.name == "minecraft:potato" then
+                    local curStack = turtle.getItemCount(stackCounter)
+                    if (curStack%64) == 0 then
+                        stackCounter = stackCounter + 1 -- Why do i need to do this Lua?!
+                    else
+                        potatoStackWSpace = stackCounter
+                        stopStackingC = false
+                    end
+                else
+                    stackCounter = stackCounter + 1
+                end
+            else
+                stackCounter = stackCounter + 1
+            end
+        end
+    end
+end
+
+function nextPotatoStack()
+    local stopStackFinder = true
+    stackCounter = stackCounter + 1
+    while stopStackFinder do
+        if stackCounter > 16 then
+            stopStackFinder = false
+        else
+            local curItemE = turtle.getItemDetail(stackCounter)
+            if curItemE ~= nil then
+                if curItemE.name == "minecraft:potato" then
+                    local currentStack = turtle.getItemCount(stackCounter)
+                    
+                    turtle.select(stackCounter)
+                    turtle.transferTo(potatoStackWSpace, 64)
+    
+                    stopStackFinder = false
+    
+                else
+                    stackCounter = stackCounter + 1
+                end
+            else
+                stackCounter = stackCounter + 1
+            end
+        end
+    end
+    
+end
+
+function endstackingCrops()
+    print("INIT: STACKING CROPS")
+    local stopStacking = true
+
+    while stopStacking do
+        if stackCounter <= 16 then
+            canStack()
+            nextPotatoStack()
+        else
+            stopStacking = false
+        end
+    end
+
+end
+
+-- endstackingCrops() is the function to run. It works, but there is something 
+-- with the last one if there is more than 64 items in the last stack.
+-- It stops where the last stack is located, and skips over non-potatoie items.
+-- 
+-- Try it out, with more than 1 stack of 64 potatoes spread around in it.
+
+-- Stack the crops END
+
 function harvestCheck()
     
     local harvestBool, fuckywucky = turtle.inspect()
@@ -171,3 +257,4 @@ end
 -- =====Done Command===== 
 print("cum dump done........................................................")
 
+-- 
