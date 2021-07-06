@@ -1,12 +1,12 @@
-<center>
 
-![CC Banner](./assets/pic/Banner.png)
+ <div align="center">
+ <img align="center" alt="Banner" src="https://github.com/Bobby2075/CC/blob/main/assets/pic/Banner.png"> </img>
+ 
+ <img align="center" alt="repo-size" src="https://img.shields.io/github/repo-size/Bobby2075/CC?style=for-the-badge"> </img>
+ <img align="center" alt="Last-commit" src="https://img.shields.io/github/last-commit/Bobby2075/CC?style=for-the-badge"> </img>
+ <img align="center" alt="contributors" src="https://img.shields.io/github/contributors/Bobby2075/CC?style=for-the-badge"> </img>
+</div>
 
-![repo-size](https://img.shields.io/github/repo-size/Bobby2075/CC?style=for-the-badge) 
-![Last-commit](https://img.shields.io/github/last-commit/Bobby2075/CC?style=for-the-badge)
-![contributors](https://img.shields.io/github/contributors/Bobby2075/CC?style=for-the-badge)
-
-</center>
 <br>
 
 # CC
